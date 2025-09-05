@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YTS Edu Foundation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active'); // adds the CSS animation class
+        observer.unobserve(entry.target);     // optional: animate only once
+      }
+    });
+  }, { threshold: 0.2 }); // trigger when 20% of the card is visible
+
+  document.querySelectorAll('.mentor-card').forEach(card => {
+    observer.observe(card);
+  });
+});
+</script>
+ 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <ul>
+    <li class="logo">
+      <a href="#home"><img src="/images/ytslogo.png" alt="YTS Logo"></a>
+    </li>
+    <div class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#mentors">Our Mentors</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#benefits">Why Take YTS?</a></li>
+      <li><a href="#approach">Our Approach</a></li>
+      <li><a href="#register">Register</a></li>
+    </div>
+  </ul>
+</nav>
+
+
+
+  <!-- Sections -->
+  <section id="home">
+  <h1>Welcome to YTS Edu Foundation</h1>
+  <p>Empowering young talent in science and education.</p>
+  <button class="btn-hero" onclick="location.href='#register'">Join Now</button>
+</section>
+
+  <section id="mentors">
+  <h2>Our Mentors & Advisors</h2>
+  <div class="mentors-container">
+
+    <div class="mentor-card">
+      <img src="/images/yeshwantwaghmare.jpg" alt="Dr. Yeshwant R. Waghmare">
+      <h3>Dr.Yeshwant R. Waghmare</h3>
+      <p class="role">Founder & Ex-chairman YTS</p>
+      <p>Renowned physicist and educator with 20+ years of experience mentoring students in STEM.</p>
+    </div>
+
+    <div class="mentor-card">
+      <img src="/images/arvindnatu.jpg" alt="Dr. Arvind R. Natu">
+      <h3>Dr.Arvind R. Natu</h3>
+      <p class="role">Acting Chairman, YTS Advisory Board</p>
+      <p>Expert in chemistry and curriculum design, providing strategic guidance to educational programs.</p>
+    </div>
+
+    <div class="mentor-card">
+      <img src="/images/anilkeskar.jpg" alt="Dr. Anil Keskar">
+      <h3>Dr.Anil Keskar</h3>
+      <p class="role">Member YTS Advisory Board</p>
+      <p>Management advisor with 25+ years of experience bridging academics and industry for students.</p>
+    </div>
+
+    <div class="mentor-card">
+      <img src="/images/shantanudeshpande.jpg" alt="Dr. Shantau Deshpande">
+      <h3>Dr.Shantau Deshpande</h3>
+      <p class="role">Sec. YTS Advisory Board</p>
+      <p>Entrepreneur and innovator, founder of Bombay Shaving Company, inspiring young talent.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="animate-on-scroll">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About YTS EDU Foundation</h2>
+      <p>
+        <span class="highlight">YTS EDU Foundation</span> is a non-profit organization supported by <span class="highlight">philanthropists, scientists, and corporates</span>. 
+        We identify <span class="highlight">real talent</span> from schools, coaching 10th-grade students for <span class="highlight">2-3 years</span> to help them achieve their dreams.
+      </p>
+      <p>
+        Our students aim for top institutions like <span class="highlight">IIT, IIST, IISc, and ISERs</span>. 
+        With the support of our <span class="highlight">advisory board</span> and generous donors, we ensure students receive <span class="highlight">guidance, resources, and mentorship</span> to reach their full potential.
+      </p>
+      <div class="about-stats">
+        <div class="stat">
+          <h3>+200</h3>
+          <p>Students Mentored</p>
+        </div>
+        <div class="stat">
+          <h3>+50</h3>
+          <p>Successful Alumni</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Ethical Guidance</p>
+        </div>
+      </div>
+      <a href="#register" class="btn-about">Join Our Program</a>
+    </div>
+    <div class="about-image">
+      <img src="/images/students.jpg" alt="Students learning">
+    </div>
+  </div>
+</section>
+
+
+ <section id="benefits">
+  <h2>Why Take YTS?</h2>
+  <div class="benefits-container">
+    
+    <div class="benefit-card">
+      <div class="icon">🎯</div>
+      <h3>Advantage & Selection Probability</h3>
+      <p>Top 100 scoring students are selected for 2 years of free coaching for competitive exams like IIT & NEET after 12th.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">📊</div>
+      <h3>Detailed Reports</h3>
+      <p>Get a 3-level aptitude and HMN report: Level 1 – Student selection, Level 2 – Subject choice, Level 3 – Exam preparation plan.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">🧭</div>
+      <h3>Counseling Sessions</h3>
+      <p>Receive a 2-year academic plan for 11th and 12th to chart your roadmap for success.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">📚</div>
+      <h3>10th Board Excellence</h3>
+      <p>Access premium 2025 practice papers from top Pune schools at a nominal cost to excel in your 10th board exams.</p>
+    </div>
+
+  </div>
+</section>
+
+  <section id="how-it-works">
+  <h2>How YTS Works</h2>
+  <div class="timeline-container">
+    <div class="timeline-step">
+      <div class="step-icon">1</div>
+      <h3>Exam</h3>
+      <p>Students appear for the Why-Test exam on a convenient Sunday. Objectives evaluate understanding and potential.</p>
+    </div>
+    <div class="timeline-step">
+      <div class="step-icon">2</div>
+      <h3>Counselling</h3>
+      <p>Top 20 students attend expert counseling to design a 2-year academic regimen emphasizing competitive exams.</p>
+    </div>
+    <div class="timeline-step">
+      <div class="step-icon">3</div>
+      <h3>Selection & Admission</h3>
+      <p>100 students are selected and admitted immediately. Coaching is free for two years under deposit assurance.</p>
+    </div>
+  </div>
+</section>
+
+<section id="registration">
+  <h2>Registration Process</h2>
+  <div class="reg-steps">
+    <div class="reg-step">
+      <div class="reg-icon">1</div>
+      <h3>Scan QR Code</h3>
+      <p>Scan the QR code to start your registration. Exam fee is ₹700.</p>
+    </div>
+    <div class="reg-step">
+      <div class="reg-icon">2</div>
+      <h3>Fill Google Form</h3>
+      <p>Provide your details and select your preferred exam date.</p>
+    </div>
+    <div class="reg-step">
+      <div class="reg-icon">3</div>
+      <h3>Payment Confirmation</h3>
+      <p>Complete the payment and submit the form. You will receive login details via WhatsApp.</p>
+    </div>
+    <div class="reg-step">
+      <div class="reg-icon">4</div>
+      <h3>Appear for Exam</h3>
+      <p>Take the exam on your chosen date and start your journey with YTS.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="register">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Message">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Yeshwant Talent Search | Email: csryts@gmail.com | Phone: +91 9766626038</p>
+  </footer>
+
+</body>
+</html>
